@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="src/image/orchid.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jinzo Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-decorations">
+            <div class="circle one"></div>
+            <div class="circle two"></div>
+        </div>
+        <div class="home-content fade-in glass-card">
+            <div class="profile-img slide-in-left">
+                <img src="jinzo_dev.jpg" alt="Developer Profile Image">
+                <h1 class="dev-name">Jinzo</h1>
+            </div>
+            <div class="text slide-in-right">
+                <h1 class="main-heading">Welcome to My Portfolio</h1>
+                <p class="intro-text">Hi, I'm Jinzo — a web developer who builds modern, responsive websites that look great, work smoothly, and help clients achieve their goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h1 class="section-title">About Me</h1>
+        <div class="about-content">
+            <div class="about-box fade-in">
+                <i class="fas fa-code" style="color: #ff0000;"></i>
+                <h2>Frontend Developer</h2>
+                <p>I build clean and responsive interfaces with PHP, CSS, JavaScript, and frameworks like Tailwind CSS.</p>
+            </div>
+            <div class="about-box fade-in delay-1">
+                <i class="fas fa-laptop-code" style="color: #0000ff;"></i>
+                <h2>UI/UX Designer</h2>
+                <p>Designing intuitive and user-centered experiences that enhance digital interactions.</p>
+            </div>
+            <div class="about-box fade-in delay-2">
+                <i class="fas fa-rocket" style="color: #ffff00;"></i>
+                <h2>Performance Optimizer</h2>
+                <p>Focused on improving load times, responsiveness, and SEO to boost user engagement.</p>
+            </div>
+            <div class="about-box fade-in delay-3">
+                <i class="fas fa-database" style="color: #2e7d32;"></i>
+                <h2>Backend Developer</h2>
+                <p>Experienced in backend technologies like PHP, MySQL, MongoDB and session-based authentication for secure, scalable applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h1 class="section-title">Projects</h1>
+        <button class="btn open-modal-btn">View My Projects</button>
+    </section>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>My Projects</h2>
+            <div class="projects-container">
+
+                <section id="projects" class="projects-section">
+                    <h1 class="section-title">My Projects</h1>
+                    <div class="projects-container">
+                        <div class="project-card">
+                            <h2>Barangay Rosario Community Engagement and Volunteer Platform</h2>
+                            <p>A platform to connect volunteers and barangay officials for community events and emergencies.</p>
+                        </div>
+                        <div class="project-card">
+                            <h2>Colegio de Montalban Internship On The Job Training</h2>
+                            <p>A digital timekeeping solution for tracking student internship attendance and session logs, providing a seamless and efficient way for both interns to monitor hours and participation. By scanning the QR code, interns can quickly clock in and out.</p>
+                        </div>
+                        <div class="project-card">
+                            <h2>Noel Atilano New Pension House (Hotel)</h2>
+                            <p>A modern reservation and management system for a local pension house with booking features.</p>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+
+    <section id="skills" class="skills-section">
+        <h1>My Skills</h1>
+        <div class="charts-container">
+
+            <div class="chart-box">
+                <canvas id="langChart"></canvas>
+                <h2>Programming Languages</h2>
+            </div>
+
+            <div class="chart-box">
+                <canvas id="frameworkChart"></canvas>
+                <h2>Frameworks</h2>
+            </div>
+
+            <div class="chart-box">
+                <canvas id="toolsChart"></canvas>
+                <h2>Tools</h2>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>If you're interested in working together or have any questions, feel free to reach out!</p>
+
+        <div class="contact-container">
+
+            <form id="contact-form">
+                <label for="form_name"><i class="fa fa-user"></i> Name</label>
+                <input type="text" name="from_name" placeholder="Your name" required>
+                <label for="form_email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="email" name="from_email" placeholder="Your email" required>
+                <label for="message"><i class="fa fa-comment"></i> Message</label>
+                <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                <p id="form-message"></p>
+            </form>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30876.00724349301!2d121.1157573019986!3d14.684242106241255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bbcf635ab217%3A0xe085150c54074bb7!2sGuitnang%20Bayan%20I%20(Pob.)%2C%20San%20Mateo%2C%20Rizal%2C%20Philippines!5e0!3m2!1sen!2sus!4v1748093891519!5m2!1sen!2sus" width="100%"
+                    height="250"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; <?= date("Y") ?> Blackorchid Jinzo Dev. All rights reserved.
+    </footer>
+
+    <script>
+        window.onload = () => {
+            const langCtx = document.getElementById('langChart').getContext('2d');
+            const frameworkCtx = document.getElementById('frameworkChart').getContext('2d');
+            const toolsCtx = document.getElementById('toolsChart').getContext('2d');
+
+            new Chart(langCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['JavaScript', 'CSS', 'PHP', 'C++'],
+                    datasets: [{
+                        data: [50, 50, 50, 15],
+                        backgroundColor: ['#007bff', '#0000ff', '#ff0000', '#00cc66']
+                    }]
+                }
+            });
+
+            new Chart(frameworkCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['React', 'Laravel', 'Express', 'Tailwind'],
+                    datasets: [{
+                        data: [35, 30, 20, 15],
+                        backgroundColor: ['skyblue', '#f05340', 'green', '#38b2ac']
+                    }]
+                }
+            });
+
+            new Chart(toolsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['VS Code', 'Visual Studio'],
+                    datasets: [{
+                        label: 'Proficiency',
+                        data: [85, 70, ],
+                        backgroundColor: ['#007ACC', '#68217A']
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#fff'
+                            },
+                            grid: {
+                                color: '#444'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#fff'
+                            },
+                            grid: {
+                                color: '#444'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#fff'
+                            }
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("YOUR_PUBLIC_KEY");
+
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+                .then(() => {
+                    document.getElementById("form-message").textContent = "Message sent successfully!";
+                    this.reset();
+                }, (error) => {
+                    document.getElementById("form-message").textContent = "Failed to send message.";
+                    console.error(error);
+                });
+        });
+    </script>
+    <script>
+        const modal = document.getElementById('project-modal');
+        const openModalBtn = document.querySelector('.open-modal-btn');
+        const closeModalBtn = document.querySelector('.close-btn');
+
+        openModalBtn.onclick = () => {
+            modal.style.display = "block";
+        };
+
+        closeModalBtn.onclick = () => {
+            modal.style.display = "none";
+        };
+
+        window.onclick = (e) => {
+            if (e.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
+</body>
+
+</html>
